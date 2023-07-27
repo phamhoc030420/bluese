@@ -1,0 +1,55 @@
+@import '../../scssStyles/global';
+@import '../../scssStyles/variables';
+@import '../../scssStyles/mixins';
+.section-title {
+    display: flex;
+    align-items: center;
+    margin-top: 171px;
+    margin-bottom: 60px;
+    margin-left: 130px;
+    &__dot {
+        margin-right: 25px;
+        width: 25px;
+        height: 25px;
+        background: #d5cde5;
+        position: relative;
+        border-radius: 50%;
+        animation: Flash 1s linear infinite;
+    }
+    &__flash {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: $primary;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &__txt {
+        color: $primary;
+        font-size: 64px;
+        font-weight: 400;
+    }
+    @include responsive(768px) {
+        margin: 171px 0 30px 30px;
+        &__txt {
+            font-size: 38px;
+            letter-spacing: 0.76px;
+        }
+        &__dot {
+            margin-right: 10px;
+        }
+    }
+}
+
+@keyframes Flash {
+    0% {
+        transform: scale(0.5);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}

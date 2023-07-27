@@ -1,0 +1,135 @@
+@import '../../scssStyles/global';
+@import '../../scssStyles/variables';
+@import '../../scssStyles/mixins';
+.btn--navigate {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 100px;
+    max-width: 360px;
+    width: 100%;
+    height: 70px;
+    margin: 10px 0;
+    z-index: 10;
+    padding: 9px;
+    cursor: pointer;
+    &::after {
+        position: absolute;
+        z-index: -1;
+        bottom: 0;
+        left: 0;
+        right: 100%;
+        margin: auto;
+        width: 100%;
+        content: "";
+        color: transparent;
+        height: 100%;
+        opacity: 0;
+        background-image: linear-gradient(to left, transparent, transparent 50%, $primary 50%, $primary);
+        background-position: 100% 0;
+        background-size: 200% 100%;
+        transition: all 0.3s ease-in;
+    }
+    &:hover::after {
+        background-position: 0 0;
+        opacity: 1;
+    }
+    &__txt {
+        margin-left: 21px;
+    }
+    &__img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 52px;
+        height: 52px;
+        background-color: #fff;
+        border-radius: 50%;
+        img {
+            width: 20px;
+            height: 15px;
+        }
+    }
+}
+
+.btn--back {
+    width: max-content;
+    padding: 23px 124px;
+    border-radius: 100px;
+    border: none;
+    color: #4b2aa1;
+    cursor: pointer;
+    width: 360px;
+    height: 70px;
+}
+
+.btn--next {
+    background: linear-gradient(135deg, #203aaa 0%, #a93bba 100%);
+    color: #fff;
+    width: max-content;
+    padding: 23px 124px;
+    border-radius: 100px;
+    border: none;
+    cursor: pointer;
+    width: 360px;
+    height: 70px;
+}
+
+.btn--tab {
+    background: white;
+    color: #4b2aa1;
+    width: 120px;
+    height: 30px;
+    border: none;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 2;
+    padding: 5px 15px;
+    text-decoration: none;
+    border-radius: 999px;
+    overflow: hidden;
+    font-size: 14px;
+    &::after {
+        z-index: -1;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        content: "";
+        background: #4b2aa1;
+        width: 0;
+        height: 100%;
+        opacity: 0;
+        transition: width 0.33s ease-in-out;
+        margin: auto;
+    }
+    &:hover::after {
+        width: 100%;
+        opacity: 1;
+    }
+    &:hover {
+        color: #fff;
+    }
+    &.active {
+        background: #dddddd;
+        color: #000;
+    }
+    &:hover.active {
+        background: #dddddd;
+        color: #fff;
+    }
+}
+
+@include responsive(1200px) {
+    .btn--back,
+    .btn--next {
+        padding: 20px 90px;
+        width: 280px;
+        height: 66px;
+    }
+}

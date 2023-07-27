@@ -1,0 +1,223 @@
+[{
+        "id": 1,
+        "date": "2023.02.16",
+        "name": "new 1",
+        "categorie01": "プレスリリース",
+        "url": "/news/sample2.html",
+        "status": "info"
+    },
+    {
+        "id": 2,
+        "date": "2022.07.01",
+        "name": "new 2",
+        "categorie01": "プレスリリース",
+        "url": "/news/sample1.html",
+        "status": "corporate"
+    },
+    {
+        "id": 3,
+        "date": "2023.02.16",
+        "name": "new 1",
+        "categorie01": "プレスリリース",
+        "url": "/news/sample2.html",
+        "status": "info"
+    },
+    {
+        "id": 4,
+        "date": "2022.07.01",
+        "name": "new 2",
+        "categorie01": "プレスリリース",
+        "url": "/news/sample1.html",
+        "status": "corporate"
+    },
+    {
+        "id": 5,
+        "date": "2023.02.16",
+        "name": "new 1",
+        "categorie01": "プレスリリース",
+        "url": "/news/sample2.html",
+        "status": "info"
+    },
+    {
+        "id": 6,
+        "date": "2022.07.01",
+        "name": "new 2",
+        "categorie01": "プレスリリース",
+        "url": "/news/sample1.html",
+        "status": "corporate"
+    },
+    {
+        "id": 7,
+        "date": "2023.02.16",
+        "name": "new 1",
+        "categorie01": "プレスリリース",
+        "url": "/news/sample2.html",
+        "status": "corporate"
+    },
+    {
+        "id": 8,
+        "date": "2022.07.01",
+        "name": "new 24",
+        "categorie01": "プレスリリース",
+        "url": "/news/sample1.html",
+        "status": "release"
+    }, {
+        "id": 9,
+        "date": "2023.02.16",
+        "name": "new 10",
+        "categorie01": "プレスリリース",
+        "url": "/news/sample2.html",
+        "status": "corporate"
+    },
+    {
+        "id": 10,
+        "date": "2022.07.01",
+        "name": "new 29",
+        "categorie01": "プレスリリース",
+        "url": "/news/sample1.html",
+        "status": "release"
+    },
+    {
+        "id": 11,
+        "date": "2023.02.16",
+        "name": "new 18",
+        "categorie01": "プレスリリース",
+        "url": "/news/sample2.html",
+        "status": "corporate"
+    },
+    {
+        "id": 12,
+        "date": "2022.07.01",
+        "name": "new 25",
+        "categorie01": "プレスリリース",
+        "url": "/news/sample1.html",
+        "status": "release"
+    },
+    {
+        "id": 13,
+        "date": "2023.02.16",
+        "name": "new 13",
+        "categorie01": "プレスリリース",
+        "url": "/news/sample2.html",
+        "status": "info"
+    },
+    {
+        "id": 14,
+        "date": "2022.07.01",
+        "name": "new 21",
+        "categorie01": "プレスリリース",
+        "url": "/news/sample1.html",
+        "status": "release"
+    },
+    {
+        "id": 15,
+        "date": "2023.02.16",
+        "name": "new 1",
+        "categorie01": "プレスリリース",
+        "url": "/news/sample2.html",
+        "status": "info"
+    },
+    {
+        "id": 16,
+        "date": "2022.07.01",
+        "name": "new 26",
+        "categorie01": "プレスリリース",
+        "url": "/news/sample1.html",
+        "status": "release"
+    },
+    {
+        "id": 17,
+        "date": "2023.02.16",
+        "name": "new 13",
+        "categorie01": "プレスリリース",
+        "url": "/news/sample2.html",
+        "status": "info"
+    },
+    {
+        "id": 18,
+        "date": "2022.07.01",
+        "name": "new 42",
+        "categorie01": "プレスリリース",
+        "url": "/news/sample1.html",
+        "status": "release"
+    },
+    {
+        "id": 19,
+        "date": "2023.02.16",
+        "name": "new 15",
+        "categorie01": "プレスリリース",
+        "url": "/news/sample2.html",
+        "status": "info"
+    },
+    {
+        "id": 20,
+        "date": "2022.07.01",
+        "name": "new 2",
+        "categorie01": "プレスリリース",
+        "url": "/news/sample1.html",
+        "status": "release"
+    },
+    {
+        "id": 21,
+        "date": "2023.02.16",
+        "name": "new 13",
+        "categorie01": "プレスリリース",
+        "url": "/news/sample2.html",
+        "status": "info"
+    },
+    {
+        "id": 22,
+        "date": "2022.07.01",
+        "name": "new 22",
+        "categorie01": "プレスリリース",
+        "url": "/news/sample1.html",
+        "status": "release"
+    }, {
+        "id": 23,
+        "date": "2022.07.01",
+        "name": "new 25",
+        "categorie01": "プレスリリース",
+        "url": "/news/sample1.html",
+        "status": "release"
+    },
+    {
+        "id": 24,
+        "date": "2023.02.16",
+        "name": "new 13",
+        "categorie01": "プレスリリース",
+        "url": "/news/sample2.html",
+        "status": "info"
+    },
+    {
+        "id": 25,
+        "date": "2022.07.01",
+        "name": "new 21",
+        "categorie01": "プレスリリース",
+        "url": "/news/sample1.html",
+        "status": "release"
+    },
+    {
+        "id": 26,
+        "date": "2023.02.16",
+        "name": "new 1",
+        "categorie01": "プレスリリース",
+        "url": "/news/sample2.html",
+        "status": "info"
+    },
+    {
+        "id": 27,
+        "date": "2022.07.01",
+        "name": "new 26",
+        "categorie01": "プレスリリース",
+        "url": "/news/sample1.html",
+        "status": "release"
+    },
+    {
+        "id": 28,
+        "date": "2023.02.16",
+        "name": "new 13",
+        "categorie01": "プレスリリース",
+        "url": "/news/sample2.html",
+        "status": "info"
+    }
+]

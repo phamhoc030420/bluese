@@ -1,0 +1,132 @@
+@import "../../scssStyles/global";
+@import "../../scssStyles/variables";
+@import "../../scssStyles/mixins";
+.philosophy {
+    &__banner {
+        position: relative;
+        height: 550px;
+        max-width: 1440px;
+        width: 100%;
+        overflow: hidden;
+        background: url("../../assets/img/マスクグループ\ -1.png") no-repeat center;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &__content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: #fff;
+            img {
+                width: 440px;
+                height: 97px;
+            }
+        }
+        &__title {
+            font-size: 28px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            line-height: 33px;
+            font-weight: 500;
+        }
+        &__p {
+            text-align: center;
+            font-size: 16px;
+            line-height: 28px;
+        }
+    }
+    &__content {
+        padding: 120px 0 160px;
+    }
+    &__items {
+        max-width: 980px;
+        width: 85%;
+        margin: 0 auto;
+    }
+    &__item {
+        display: flex;
+        height: 210px;
+        border-bottom: 1px solid #d3d3d3;
+        align-items: center;
+        padding: 60px 0;
+        &:first-child {
+            padding-top: 0;
+        }
+        &__header {
+            width: 40%;
+        }
+        &__title {
+            font-size: 50px;
+            line-height: 60px;
+            letter-spacing: -1px;
+            color: $primary;
+        }
+        &__subtitle {
+            font-size: 18px;
+            line-height: 32.4px;
+            letter-spacing: 0;
+            color: $primary;
+        }
+        &__content {
+            width: 60%;
+            font-size: 18px;
+            line-height: 32.4px;
+            letter-spacing: 0;
+            color: #000;
+        }
+    }
+    &--rules {
+        margin-top: 0;
+    }
+    @include responsive(992px) {
+        &__item {
+            &__title {
+                font-size: 34px;
+                line-height: 41px;
+                letter-spacing: -0.68px;
+            }
+            &__subtitle {
+                font-size: 16px;
+                line-height: 28.8px;
+            }
+            &__content {
+                width: 100%;
+                font-size: 16px;
+                line-height: 28.8px;
+            }
+        }
+    }
+    @include responsive(768px) {
+        &__title {
+            margin: 171px 0 30px 30px;
+        }
+        &__content {
+            padding: 80px 0 100px;
+        }
+        &__banner {
+            &__content {
+                width: 85%;
+                img {
+                    width: 240px;
+                    height: 52px;
+                }
+            }
+            &__title {
+                font-size: 22px;
+                letter-spacing: 0.44px;
+            }
+        }
+        &__item {
+            flex-direction: column;
+            align-items: flex-start;
+            height: 220px;
+            padding-top: 40px;
+            &__header {
+                margin-bottom: 30px;
+                width: 100%;
+            }
+        }
+    }
+}

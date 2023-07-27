@@ -1,0 +1,181 @@
+@import "../../scssStyles/global";
+@import "../../scssStyles/variables";
+@import "../../scssStyles/mixins";
+//header
+.header {
+    position: fixed;
+    z-index: 20;
+    margin: 0 auto;
+    max-width: 1440px;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 62px;
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1440px;
+        width: 100%;
+        padding: 20px 30px;
+        margin: 0 auto;
+    }
+    &>a {
+        display: block;
+    }
+    &__logo {
+        display: block;
+        width: 200px;
+        height: 44px;
+    }
+    &__nav {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        background-color: #000000;
+        height: 62px;
+        border-radius: 100px;
+        &>div {
+            display: flex;
+            margin: 0 20px;
+            .nav-link {
+                position: relative;
+                z-index: 2;
+                padding: 5px 15px;
+                text-decoration: none;
+                color: #fff;
+                border-radius: 999px;
+                background-color: transparent;
+                overflow: hidden;
+                font-size: 15px;
+                &::after {
+                    position: absolute;
+                    z-index: -1;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    width: 0%;
+                    content: "";
+                    color: transparent;
+                    background: #4b2aa1;
+                    height: 100%;
+                    opacity: 0;
+                    transition: width 0.3s ease-out;
+                }
+                &:hover::after {
+                    width: 100%;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    &__toggler,
+    &__close {
+        width: 50px;
+        height: 50px;
+        border: 1px solid #D0D0D0;
+        border-radius: 50%;
+        opacity: 1;
+        cursor: pointer;
+        display: none;
+        justify-content: center;
+        align-items: center;
+    }
+    &__toggler {
+        background: #000000 0% 0% no-repeat padding-box;
+        img {
+            width: 24px;
+        }
+    }
+    &__close {
+        background: #fff 0% 0% no-repeat padding-box !important;
+        img {
+            width: 22px;
+        }
+    }
+    &__collapse {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: auto;
+        max-height: 640px;
+        background-color: #000000;
+        color: #fff;
+        margin: 5px;
+        padding-bottom: 65px;
+        border-radius: 5px;
+        &>img {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            height: 115px;
+        }
+        &__logo {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            img {
+                width: 150px;
+                height: 30px;
+            }
+        }
+        &__nav {
+            display: flex;
+            flex-direction: column;
+            margin: 0 45px;
+            &__item {
+                position: relative;
+                overflow: hidden;
+                z-index: 10;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                color: #fff;
+                padding: 25px 0;
+                border-bottom: 1px solid #D0D0D0;
+                cursor: pointer;
+                &:first-child {
+                    border-top: 1px solid #D0D0D0;
+                }
+                a {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    color: #fff;
+                    text-decoration: none;
+                    font-size: 18px;
+                    line-height: 27px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+    @include responsive(992px) {
+        &__nav {
+            &>div {
+                .nav-link {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    @include responsive(768px) {
+        &__logo {
+            width: 150px;
+            height: 35px;
+        }
+        &__content {
+            padding: 20px
+        }
+        &__nav {
+            display: none;
+        }
+        &__toggler,
+        &__close {
+            display: flex;
+        }
+    }
+}
