@@ -108,7 +108,8 @@ const Contact = () => {
       ${values.privacyPolicy ? "同意する" : "同意しない"}
     `;
 
-    const mailtoURL = `mailto:contact@blusetech.co.jp?subject=${encodeURIComponent(
+    // contact@blusetech.co.jp
+    const mailtoURL = `mailto:device.hcm@gmail.com?subject=${encodeURIComponent(
       subject
     )}&body=${encodeURIComponent(emailBody)}`;
     window.location.href = mailtoURL;
