@@ -8,23 +8,23 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { useState } from "react";
 import "./contact.scss";
 
-export const schema = object({
+const schema = object({
   companyName: string().required("会社名/学校名は必須になります。"),
   department: string(),
-  fullName: string().required("お名前（フルネーム）名は必須になります。"),
-  furigana: string().required("ふりがな名は必須になります。"),
+  fullName: string().required("お名前（フルネーム）は必須になります。"),
+  furigana: string().required("ふりがなは必須になります。"),
   email: string()
     .email("正しい形式で入力してください。")
-    .required("メールアドレス名は必須になります。"),
+    .required("メールアドレスは必須になります。"),
   confirmEmail: string()
     .email("正しい形式で入力してください。")
-    .required("名は必須になります。")
+    .required("メールアドレス（確認）は必須になります。")
     .oneOf([ref("email")], "確認用メールアドレスが異なります。"),
   phone: number()
     .typeError("電話番号半角数字で入力してください。")
     .nullable()
     .transform((_, val) => (val !== "" ? Number(val) : null)),
-  content: string().required("お問い合わせ内容名は必須になります。"),
+  content: string().required("お問い合わせ内容は必須になります。"),
   privacyPolicy: bool().oneOf([true], "同意が必須になります。"),
 });
 
@@ -62,7 +62,7 @@ const Contact = () => {
     console.log(error);
   };
 
-  function convertUTCtoJST(utcDate) {
+  const convertUTCtoJST = (utcDate) => {
     const jstOffset = 9 * 60; // Japan Standard Time (JST) is UTC+9
     const utcTime = utcDate.getTime();
     const jstTime = utcTime + jstOffset * 60 * 1000; // Convert to milliseconds
