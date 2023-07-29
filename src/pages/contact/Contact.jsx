@@ -14,7 +14,7 @@ const schema = object({
   fullName: string().required("お名前（フルネーム）は必須になります。"),
   furigana: string().required("ふりがなは必須になります。"),
   email: string()
-    .email("正しい形式で入力してください。")
+    .email("メールアドレス正しい形式で入力してください。")
     .required("メールアドレスは必須になります。"),
   confirmEmail: string()
     .email("正しい形式で入力してください。")
