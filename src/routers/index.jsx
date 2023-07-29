@@ -6,6 +6,7 @@ import Service from "../pages/service/Service";
 import News from "../pages/news/News";
 import Contact from "../pages/contact/Contact";
 import NewDetail from "../pages/news/newDetail/NewDetail";
+import Policy from "../pages/policy";
 
 const router = createBrowserRouter([
   {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
   {
     path: "/contact",
     element: <Contact />,
+  },
+  {
+    path: "/policy",
+    element: <Policy />,
   },
 ]);
 
