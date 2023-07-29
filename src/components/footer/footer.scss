@@ -76,6 +76,9 @@
         &__copyright {
             flex-direction: column-reverse;
             align-items: center;
+            &__txt {
+                text-align: center;
+            }
         }
     }
 }

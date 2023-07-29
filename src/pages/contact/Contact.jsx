@@ -67,10 +67,9 @@ const Contact = () => {
     const utcTime = utcDate.getTime();
     const jstTime = utcTime + jstOffset * 60 * 1000; // Convert to milliseconds
     return new Date(jstTime);
-  }
+  };
 
   const sendEmail = async (values) => {
-    // Get the current date and time in JST format
     const currentDate = convertUTCtoJST(new Date());
     const jstDate = currentDate.toLocaleString("ja-JP");
 

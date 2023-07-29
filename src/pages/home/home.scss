@@ -3,548 +3,608 @@
 @import "../../scssStyles/mixins";
 //banner
 .banner {
+  display: flex;
+  width: 100%;
+  height: 700px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  &--left {
+    width: 460px;
+    height: 365px;
     display: flex;
-    width: 100%;
-    height: 700px;
     justify-content: center;
     align-items: center;
-    position: relative;
+    margin-left: 100px;
+  }
+  &--right {
+    height: 750px;
+    width: 1145px;
+    z-index: 10;
+    clip-path: polygon(0 0, 100% 0%, 100% 97%, 20% 100%);
+    img {
+      height: 100%;
+    }
+  }
+  &__img {
+    display: inline-block;
+    width: 100%;
+  }
+  @media screen and (max-width: 992px) {
+    overflow: hidden;
+    height: 550px;
     &--left {
-        width: 460px;
-        height: 365px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-left: 100px;
+      width: 40%;
+      z-index: 10;
+      margin-left: 50px;
     }
     &--right {
-        height: 750px;
-        width: 1145px;
-        z-index: 10;
-        clip-path: polygon(0 0, 100% 0%, 100% 97%, 20% 100%);
-        img {
-            height: 100%;
-        }
+      width: 60%;
+      height: 100%;
+      img {
+        width: 150%;
+        transform: translateX(-15%);
+        height: 100%;
+      }
+      clip-path: none;
     }
-    &__img {
-        display: inline-block;
-        width: 100%;
+  }
+  @media screen and (max-width: 576px) {
+    flex-direction: column-reverse;
+    overflow: hidden;
+    height: 700px;
+    &--left {
+      width: 100%;
+      transform: translate(0, -40%);
+      z-index: 10;
+      margin-left: 25px;
     }
-    @media screen and (max-width: 992px) {
-        overflow: hidden;
-        height: 550px;
-        &--left {
-            width: 40%;
-            z-index: 10;
-            margin-left: 50px;
-        }
-        &--right {
-            width: 60%;
-            height: 100%;
-            img {
-                width: 150%;
-                transform: translateX(-15%);
-                height: 100%;
-            }
-            clip-path: none;
-        }
+    &--right {
+      width: 100%;
+      z-index: 0;
+      img {
+        width: 170%;
+        transform: translateX(-15%);
+        height: 100%;
+      }
+      clip-path: none;
     }
-    @media screen and (max-width: 576px) {
-        flex-direction: column-reverse;
-        overflow: hidden;
-        height: 700px;
-        &--left {
-            width: 100%;
-            transform: translate(0, -40%);
-            z-index: 10;
-            margin-left: 25px;
-        }
-        &--right {
-            width: 100%;
-            z-index: 0;
-            img {
-                width: 170%;
-                transform: translateX(-15%);
-                height: 100%;
-            }
-            clip-path: none;
-        }
-    }
+  }
 }
 
 //our-service
 .our-service {
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    align-items: center;
-    background-color: #000;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  background-color: #000;
+  text-align: center;
+  overflow: hidden;
+  padding: 0 25px 100px;
+  &__bg {
+    background: url("../../assets/img/マスクグループ 100.png") 100% 100%
+      no-repeat;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    transform: translate(-35%, 5%);
+  }
+  &__subtitle {
+    color: #fff;
+    font-size: 20px;
     text-align: center;
-    overflow: hidden;
-    padding: 0 25px 100px;
-    &__bg {
-        background: url("../../assets/img/マスクグループ 100.png") 100% 100% no-repeat;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        z-index: 10;
-        width: 100%;
-        height: 100%;
-        transform: translate(-35%, 5%);
+    line-height: 36px;
+    margin-top: 180px;
+    &::after {
+      content: "";
+      display: block;
+      width: 70px;
+      height: 1px;
+      background: #fff;
+      margin: 0 auto;
+      margin-top: 17px;
     }
-    &__subtitle {
-        color: #fff;
-        font-size: 20px;
-        text-align: center;
-        line-height: 36px;
-        margin-top: 180px;
-        &::after {
-            content: "";
-            display: block;
-            width: 70px;
-            height: 1px;
-            background: #fff;
-            margin: 0 auto;
-            margin-top: 17px;
-        }
+  }
+  &__title {
+    font-size: 80px;
+    color: #fff;
+    text-align: center;
+  }
+  &__p1 {
+    color: #fff;
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-weight: 700;
+  }
+  &__p2 {
+    color: #fff;
+    font-size: 16px;
+    line-height: 30px;
+  }
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    z-index: 10;
+    margin-top: 80px;
+    margin-bottom: 50px;
+  }
+  &__item {
+    width: 32%;
+    height: 420px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 25px;
+    }
+    &__img {
+      display: flex;
+      align-items: center;
+      width: 110px;
+      height: 110px;
+      margin-top: 11px;
+      margin-bottom: 16px;
+      img {
+        width: 100%;
+        display: inline-block;
+      }
     }
     &__title {
-        font-size: 80px;
-        color: #fff;
-        text-align: center;
+      color: $primary;
+      font-size: 38px;
+      letter-spacing: -0.76px;
+      font-weight: 500;
+      white-space: nowrap;
     }
-    &__p1 {
-        color: #fff;
-        font-size: 20px;
-        margin-top: 30px;
-        margin-bottom: 20px;
-        font-weight: 700;
+    &__subtitle {
+      margin-bottom: 20px;
+      color: $primary;
+      font-size: 18px;
+      letter-spacing: -0.36px;
     }
-    &__p2 {
-        color: #fff;
-        font-size: 16px;
-        line-height: 30px;
+    &__txt {
+      text-align: left;
+      font-size: 16px;
+    }
+  }
+  @include responsive(1200px) {
+    &__item {
+      &__title {
+        font-size: 24px;
+        font-weight: normal;
+      }
+    }
+  }
+  @include responsive(992px) {
+    &__title {
+      font-size: 70px;
     }
     &__items {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 20px;
-        z-index: 10;
-        margin-top: 80px;
-        margin-bottom: 50px;
+      flex-wrap: wrap;
+      justify-content: center;
     }
     &__item {
-        width: 32%;
-        height: 420px;
-        border-radius: 10px;
-        background-color: rgb(255, 255, 255);
-        &__content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 25px;
-        }
-        &__img {
-            display: flex;
-            align-items: center;
-            width: 110px;
-            height: 110px;
-            margin-top: 11px;
-            margin-bottom: 16px;
-            img {
-                width: 100%;
-                display: inline-block;
-            }
-        }
-        &__title {
-            color: $primary;
-            font-size: 32px;
-            font-weight: 500;
-            white-space: nowrap;
-        }
-        &__subtitle {
-            margin-bottom: 20px;
-            color: $primary;
-            font-size: 18px;
-        }
-        &__txt {
-            text-align: left;
-            font-size: 16px;
-        }
+      width: 40%;
+      &__title {
+        font-size: 28px;
+        font-weight: normal;
+      }
     }
-    @include responsive(1200px) {
-        &__item {
-            &__title {
-                font-size: 24px;
-                font-weight: normal;
-            }
-        }
+  }
+  @include responsive(768px) {
+    &__items {
+      flex-direction: column;
     }
-    @include responsive(992px) {
-        &__title {
-            font-size: 70px;
-        }
-        &__items {
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        &__item {
-            width: 40%;
-            &__title {
-                font-size: 28px;
-                font-weight: normal;
-            }
-        }
+    &__item {
+      width: 80%;
     }
-    @include responsive(768px) {
-        &__items {
-            flex-direction: column;
-        }
-        &__item {
-            width: 80%;
-        }
+  }
+  @include responsive(576px) {
+    height: auto;
+    &__subtitle {
+      margin-top: 70px;
     }
-    @include responsive(576px) {
-        height: auto;
-        &__subtitle {
-            margin-top: 70px;
-        }
-        &__title {
-            margin-top: 20px;
-            font-size: 50px;
-            font-weight: normal;
-        }
-        &__p1 {
-            font-size: 15px;
-            margin-top: 40px;
-        }
-        &__p2 {
-            font-size: 15px;
-        }
-        &__items {
-            flex-direction: column;
-            gap: 25px;
-        }
-        &__item {
-            width: 100%;
-            height: auto;
-            margin-top: 0;
-            &__content {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                margin: 25px;
-            }
-            &__img {
-                margin-bottom: 10px;
-            }
-            &__title {
-                font-size: 35px;
-                font-weight: normal;
-            }
-            &__txt {
-                text-align: left;
-                font-size: 14px;
-            }
-        }
-        &__btn {
-            width: 100%;
-            margin-bottom: 70px;
-        }
+    &__title {
+      margin-top: 20px;
+      font-size: 50px;
+      font-weight: normal;
     }
+    &__p1 {
+      font-size: 15px;
+      margin-top: 40px;
+    }
+    &__p2 {
+      font-size: 15px;
+    }
+    &__items {
+      flex-direction: column;
+      gap: 25px;
+    }
+    &__item {
+      width: 100%;
+      height: auto;
+      margin-top: 0;
+      &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 25px;
+      }
+      &__img {
+        margin-bottom: 10px;
+      }
+      &__title {
+        font-size: 35px;
+        font-weight: normal;
+      }
+      &__txt {
+        text-align: left;
+        font-size: 14px;
+      }
+    }
+    &__btn {
+      width: 100%;
+      margin-bottom: 70px;
+    }
+  }
+  @include responsive(375px) {
+    &__title {
+      font-size: 40px;
+    }
+    &__p1 {
+      font-size: 14px;
+    }
+    &__p2 {
+      font-size: 14px;
+    }
+    &__item {
+      &__content {
+        width: 310px;
+        height: 350px;
+      }
+      &__title {
+        font-size: 32px;
+      }
+      &__subtitle {
+        font-size: 16px;
+      }
+      &__txt {
+        font-size: 16px;
+      }
+    }
+  }
 }
 
 //our-company
 .our-company {
-    &__banner {
-        height: 400px;
-        position: relative;
-        video {
-            width: 100%;
-            max-width: 1440px;
-            max-height: 400px;
-        }
-        img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            max-width: 1440px;
-            width: 100%;
-            height: 400px;
-            z-index: 10;
-        }
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            max-width: 1440px;
-            width: 100%;
-            height: 400px;
-            background-color: #000;
-            opacity: 0.5;
-        }
+  &__banner {
+    height: 400px;
+    position: relative;
+    video {
+      width: 100%;
+      max-width: 1440px;
+      max-height: 400px;
     }
-    &__main {
-        display: flex;
-        align-items: center;
-        padding-bottom: 18px;
-        padding-top: 140px;
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      max-width: 1440px;
+      width: 100%;
+      height: 400px;
+      z-index: 10;
     }
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      max-width: 1440px;
+      width: 100%;
+      height: 400px;
+      background-color: #000;
+      opacity: 0.5;
+    }
+  }
+  &__main {
+    display: flex;
+    align-items: center;
+    padding-bottom: 18px;
+    padding-top: 140px;
+  }
+  &__title {
+    margin-left: 0;
+    margin-top: 0;
+  }
+  &__title--md {
+    display: none;
+    margin: 0 auto 25px;
+    width: 85%;
+  }
+  &__img {
+    width: 50%;
+    img {
+      width: 100%;
+    }
+  }
+  &__content {
+    width: 50%;
+    margin-right: 100px;
+    margin-left: 25px;
+    &__p1 {
+      color: #000;
+      font-size: 20px;
+      margin-top: 30px;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+    &__p2 {
+      color: #000;
+      font-weight: 400;
+      letter-spacing: 0;
+      font-size: 14px;
+      line-height: 30px;
+    }
+    &__btn {
+      margin-top: 88px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  &__news {
     &__title {
-        margin-left: 0;
-        margin-top: 0;
-    }
-    &__title--md {
-        display: none;
-        margin: 0 auto 25px;
-        width: 85%;
-    }
-    &__img {
-        width: 50%;
-        img {
-            width: 100%;
-        }
+      margin-left: 0;
     }
     &__content {
-        width: 50%;
-        margin-right: 100px;
-        margin-left: 25px;
-        &__p1 {
-            color: #000;
-            font-size: 20px;
-            margin-top: 30px;
-            margin-bottom: 20px;
-            font-weight: 700;
-        }
-        &__p2 {
-            color: #000;
-            font-size: 14px;
-            line-height: 30px;
-        }
-        &__btn {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+      max-width: 980px;
+      width: 85%;
+      margin: 0 auto;
     }
-    &__news {
-        &__title {
-            margin-left: 0;
-        }
-        &__content {
-            max-width: 980px;
-            width: 85%;
-            margin: 0 auto;
-        }
+  }
+  .btn--navigate--company {
+    background-color: #fff;
+    color: #000;
+    .btn--navigate__img {
+      border: 1px solid $primary;
     }
-    .btn--navigate--company {
-        background-color: #fff;
-        color: #000;
-        .btn--navigate__img {
-            border: 1px solid $primary;
-        }
-        &:hover {
-            color: #fff;
-        }
+    &:hover {
+      color: #fff;
     }
-    &__contact {
-        margin: 100px 25px 25px;
-        background: url("../../assets/img/マスクグループ\ 18.png") #000 right bottom no-repeat;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 100px;
-        border-radius: 5px;
-        gap: 80px;
-        &__content {
-            width: 85%;
-            margin: 0 auto;
-        }
-        &__p {
-            color: #fff;
-        }
-        .session--title--contact {
-            margin-top: 0;
-            margin-bottom: 25px;
-            margin-left: 0;
-            &__dot {
-                background-color: rgba(255, 255, 255, 0.25);
-            }
-            &__flash {
-                background-color: #fff;
-            }
-            &__txt {
-                color: #fff;
-            }
-        }
-    }
-    @include responsive(992px) {
-        &__main {
-            flex-direction: column;
-        }
-        &__content {
-            margin: 0;
-            width: 80%;
-            &__p2 {
-                margin-bottom: 25px;
-            }
-        }
-        &__title {
-            display: none;
-        }
-        &__title--md {
-            display: inherit;
-        }
-        &__img {
-            width: 100%;
-        }
-        &__news {
-            &__title {
-                margin: 0;
-            }
-            &__nav {
-                &__content {
-                    flex-direction: column;
-                    align-items: flex-start;
-                }
-            }
-        }
-        &__contact {
-            flex-direction: column;
-            padding: 20px;
-        }
-    }
-    @include responsive(576px) {
-        &__main {
-            padding-top: 80px;
-        }
-    }
-}
-
-.rows {
-    margin: 0 auto;
-    margin-top: 40px;
-    &__item {
-        padding: 35px 0;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-bottom: 1px solid #d3d3d3;
-        font-size: 16px;
-        gap: 20px;
-        &:first-child {
-            border-top: 1px solid #d3d3d3;
-        }
-        &__left {
-            display: flex;
-            align-items: center;
-            gap: 30px;
-        }
-        &__status {
-            background: #4b2aa1;
-            text-align: center;
-            color: white;
-            font-size: 14px;
-            font-weight: 100;
-            padding: 2px;
-            width: 100px;
-        }
-        &__right {
-            text-align: right;
-            button {
-                background: none;
-                border: none;
-                color: #4b2aa1;
-                font-weight: bold;
-                font-size: 25px;
-                cursor: pointer;
-            }
-        }
-    }
-}
-
-.pagination {
+  }
+  .wrapper-news-btn {
     display: flex;
     justify-content: center;
     margin-top: 60px;
-    margin-bottom: 160px;
-    gap: 30px;
-    #page-number {
-        display: flex;
-        justify-content: center;
-        gap: 30px;
+  }
+  .btn--navigate--news {
+    background-color: #fff;
+    color: #000;
+    .btn--navigate__img {
+      border: 1px solid $primary;
     }
-    button {
-        display: block;
-        background: white;
-        color: #4b2aa1;
-        border: none;
-        position: relative;
-        z-index: 2;
-        padding: 5px 15px;
-        text-decoration: none;
-        overflow: hidden;
+    &:hover {
+      color: #fff;
+    }
+  }
+  &__contact {
+    margin: 100px 25px 25px;
+    background: url("../../assets/img/マスクグループ\ 18.png") #000 right bottom
+      no-repeat;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px;
+    border-radius: 5px;
+    gap: 80px;
+    &__content {
+      width: 85%;
+      margin: 0 auto;
+    }
+    &__p {
+      color: #fff;
+    }
+    .session--title--contact {
+      margin-top: 0;
+      margin-bottom: 25px;
+      margin-left: 0;
+      &__dot {
+        background-color: rgba(255, 255, 255, 0.25);
+      }
+      &__flash {
+        background-color: #fff;
+      }
+      &__txt {
+        color: #fff;
+      }
+    }
+  }
+  @include responsive(992px) {
+    &__main {
+      flex-direction: column;
+    }
+    &__content {
+      margin: 0;
+      width: 80%;
+      &__p2 {
+        margin-bottom: 25px;
+      }
+    }
+    &__title {
+      display: none;
+    }
+    &__title--md {
+      display: inherit;
+    }
+    &__img {
+      width: 100%;
+    }
+    &__news {
+      &__title {
+        margin: 0;
+      }
+      &__nav {
+        &__content {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+    }
+    &__contact {
+      flex-direction: column;
+      padding: 20px;
+    }
+  }
+  @include responsive(576px) {
+    &__main {
+      padding-top: 80px;
+    }
+    &__banner {
+      height: 300px;
+      video {
+        min-height: 300px;
+      }
+      img {
+        height: 300px;
+      }
+      .overlay {
+        height: 300px;
+      }
+    }
+  }
+}
+
+.rows {
+  margin: 0 auto;
+  margin-top: 40px;
+  &__item {
+    padding: 35px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #d3d3d3;
+    font-size: 16px;
+    gap: 20px;
+    &:first-child {
+      border-top: 1px solid #d3d3d3;
+    }
+    &__left {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+    &__status {
+      background: #4b2aa1;
+      text-align: center;
+      color: white;
+      font-size: 14px;
+      font-weight: 100;
+      padding: 2px;
+      width: 100px;
+    }
+    &__right {
+      text-align: right;
+      button {
         background: none;
-        width: 48px;
-        height: 48px;
-        border-radius: 50%;
-        &::after {
-            z-index: -1;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            content: "";
-            background: #4b2aa1;
-            width: 0;
-            height: 100%;
-            opacity: 0;
-            margin: auto;
-        }
-        &:hover::after {
-            width: 100%;
-            opacity: 1;
-            animation: zoom-in-zoom-out 0.4s ease-in-out;
-        }
-        &.number {
-            &.active {
-                color: #000;
-            }
-            &:hover {
-                color: white;
-            }
-        }
-        &.next,
-        &.prev {
-            background: white;
-        }
-        &.next:hover,
-        &.prev:hover {
-            color: white;
-        }
+        border: none;
+        color: #4b2aa1;
+        font-weight: bold;
+        font-size: 25px;
+        cursor: pointer;
+      }
     }
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+  margin-bottom: 160px;
+  gap: 30px;
+  #page-number {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+  button {
+    display: block;
+    background: white;
+    color: #4b2aa1;
+    border: none;
+    position: relative;
+    z-index: 2;
+    padding: 5px 15px;
+    text-decoration: none;
+    overflow: hidden;
+    background: none;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    &::after {
+      z-index: -1;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      content: "";
+      background: #4b2aa1;
+      width: 0;
+      height: 100%;
+      opacity: 0;
+      margin: auto;
+    }
+    &:hover::after {
+      width: 100%;
+      opacity: 1;
+      animation: zoom-in-zoom-out 0.4s ease-in-out;
+    }
+    &.number {
+      &.active {
+        color: #000;
+      }
+      &:hover {
+        color: white;
+      }
+    }
+    &.next,
+    &.prev {
+      background: white;
+    }
+    &.next:hover,
+    &.prev:hover {
+      color: white;
+    }
+  }
 }
 
 @include responsive(768px) {
-    .rows {
-        &__item {
-            &__left {
-                flex-wrap: wrap;
-            }
-        }
+  .rows {
+    &__item {
+      &__left {
+        flex-wrap: wrap;
+      }
     }
-    .pagination {
-        gap: 0;
-        button {
-            &.next {
-                margin-left: 20px;
-            }
-            &.prev {
-                margin-right: 20px;
-            }
-        }
+  }
+  .pagination {
+    gap: 0;
+    button {
+      &.next {
+        margin-left: 20px;
+      }
+      &.prev {
+        margin-right: 20px;
+      }
     }
+  }
 }

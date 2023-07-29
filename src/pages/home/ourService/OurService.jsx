@@ -14,25 +14,25 @@ const OurService = () => {
         BOOST <br /> YOUR BUSINESS
       </h1>
       <p className="our-service__p1">
-        BluseTechのテクノロジーで、ビジネスをより高みへ。
+        高価値のソフトウェア・サービスを提供しビジネスと世界に貢献する。
       </p>
       <p className="our-service__p2">
-        私達は、「実行フェーズ」において確かなる価値を提供することでさらなる高みを目指すご支援に貢献していきます。
+        弊社は、高価値のソフトウェア・サービスを提供することにより、世界に貢献することを目指しております。
       </p>
       <p className="our-service__p2">
-        ソリューションサービスからスクラッチでの開発まで確かなスキル・支援体制をもとに、
+        この使命を果たすために、組織の知性と才能を発揮し、全力を尽くして参ります。
       </p>
       <p className="our-service__p2">
-        世の中のビジネスの「不可能」を「可能」に変えていきたいと考えております。
+        国際的に認められた真の価値を創造することで、世の中の恩恵に恩返しし、世界に貢献したいと思っております。
       </p>
       <div className="our-service__items">
         <div className="our-service__item">
           <div className="our-service__item__content">
             <div className="our-service__item__img">
-              <img src={item1} alt=" HIGH SKILL " />
+              <img src={item1} alt="HIGHLY SKILLED" />
             </div>
             <div style={{ textAlign: "center" }}>
-              <h1 className="our-service__item__title">HIGH SKILL</h1>
+              <h1 className="our-service__item__title">HIGHLY SKILLED</h1>
               <p className="our-service__item__subtitle">確かなスキル</p>
               <p className="our-service__item__txt">
                 私達は、各種DXやテクノロジー、企画・業務に加え、幅広い開発業務の経験を有する業界トップレベルのエンジニア集団です。
@@ -46,9 +46,9 @@ const OurService = () => {
               <img src={item2} alt=" SPEEDY " />
             </div>
             <div style={{ textAlign: "center" }}>
-              <h1 className="our-service__item__title">FROM TOP TO BOTTOM</h1>
+              <h1 className="our-service__item__title">TOP TO BOTTOM</h1>
               <p className="our-service__item__subtitle">
-                一気通貫の支援サービス​
+                一気通貫の支援サービス
               </p>
               <p className="our-service__item__txt">
                 グループ会社のコンサルタントと連携し、IT/Digital戦略・超上流から開発・保守運用に至るまで一気通貫のご支援が可能です。

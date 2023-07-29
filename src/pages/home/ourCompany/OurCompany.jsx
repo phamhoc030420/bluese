@@ -31,11 +31,14 @@ const OurCompany = () => {
           <Title addClass="our-company__title">OUR COMPANY</Title>
           <p className="our-company__content__p1">
             私達はクライアントのビジネスを的確に理解し、
+            <br />
             最適な設計・開発プランを提供いたします。
           </p>
           <p className="our-company__content__p2">
             BluseTechは、クライアントの企画構想を理解したうえで
+            <br />
             システム開発やソリューション提供を含めた
+            <br />
             実行フェーズの支援を得意領域とする集団です。
           </p>
           <div className="our-company__content__btn">
@@ -94,6 +97,18 @@ const OurCompany = () => {
               </div>
             ))}
           </div>
+
+          <div className="wrapper-news-btn">
+            <div
+              className="btn--navigate btn--navigate--news"
+              onClick={() => navigate(`/news`)}
+            >
+              <div className="btn--navigate__txt">News</div>
+              <div className="btn--navigate__img">
+                <img src={icnR} alt="arrow right" />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -108,7 +123,7 @@ const OurCompany = () => {
             </span>
           </div>
           <p className="our-company__contact__p">
-            私達は、クライアント様のビジネスを加速させます。
+            私達は、オフショアでクライアント様のビジネスを加速させます。
             <br />
             ご相談からお見積りまでお気軽にお問い合わせください。
           </p>
