@@ -1,0 +1,25 @@
+.box_container{
+    border: 1px solid;
+    line-height: 40px;
+    margin-top: 140px;
+    margin-bottom: 60px;
+    display: inline-block;
+    padding: 0 40px;
+
+    .box_content{
+        text-align: center;
+        align-items: center;
+    }
+}
+@media (max-width: 768px) {
+    .box_content{
+        font-size: 16px;
+    }
+  }
+@media (max-width: 500px) {
+    .box_container{
+        padding: 0 10px;
+    .box_content{
+        font-size: 14px;
+    }}
+  }
